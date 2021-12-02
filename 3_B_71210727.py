@@ -1,7 +1,17 @@
-input_1 = input("Input : ")
-tambahan = len(input_1)
-print("Output : ")
-for i in range(tambahan):
-    print(input_1[:i])
-for j in range(tambahan,0,-1):
-    print(input_1[:j])
+input1 = str(input("Input : "))
+panjang = len(input1)
+print("Output :")
+
+for i in range(panjang):
+    for j in range(panjang-i-1):
+        print(" ",end=" ")
+    for j in range(i+1):
+        print(input1[j],end=" ")
+    print()
+
+for i in range(panjang):
+    for j in range(i):
+        print(" ",end=" ")
+    for j in range(panjang-i):
+        print(input1[j],end=" ")
+    print()
